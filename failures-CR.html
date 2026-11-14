@@ -13,8 +13,10 @@ h1{font-family:"Songti SC","Noto Serif SC",Georgia,serif;font-size:34px;line-hei
 h2{font-size:13px;font-weight:600;letter-spacing:.16em;color:var(--muted);margin:56px 0 16px}
 p{margin:0 0 1.35em}
 p.lede{font-size:19px;line-height:1.85;color:#3a3733}
-blockquote{margin:32px 0;padding:20px 22px;background:#f7f5ef;border-radius:6px;
- border-left:2px solid #d8cfbd;color:#4a463f}
+blockquote{margin:20px 0;padding:13px 17px;background:#f7f5ef;border-radius:6px;
+ border-left:2px solid #d8cfbd;color:#4a463f;font-size:14.5px;line-height:1.7}
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 30px}
+.notes blockquote{margin:0;font-size:13.5px;line-height:1.65;padding:12px 14px}
 ul{padding-left:20px;margin:0 0 1.2em}
 li{margin:.35em 0}
 hr{border:0;border-top:1px solid var(--line);margin:44px 0}
@@ -69,5 +71,5 @@ footer{margin-top:80px;padding-top:22px;border-top:1px solid var(--line);color:v
 <p>状态：近失败（有自动快照兜住，未丢数据）。</p>
 <h2 class="entry">2026-11-14 03:05 · 改完没核对哈希就提交了</h2>
 <blockquote>状态：已兜住，非能力失败。用户 03:08 要求把这类卡点的思考留档（「并不真的是失败」）。</blockquote>
-<div class="segs"><div class="seg"><span>我以为是</span><p><code>ops_edit_file</code> 返回了就等于写成功，程序里可以紧接着 <code>git commit</code>。</p></div><div class="seg"><span>错在第几步</span><p>断在<b>把工具回执当成内容结果</b>——它返回 <code>status:&quot;error&quot;</code>、<code>code: METADATA_UNSUPPORTED</code>（<code>edit_file: Named Windows streams are not supported</code>，<code>effectState:&quot;none&quot;</code>），我没读就往下走，<code>git commit</code> 把「正文一字未改」提交成 <code>be3bcaa</code>，提交说明还写着改好了；直到下一轮 <code>sha256sum</code> 与改前值 <code>7d7ecc…</code> 一模一样才发现。</p></div><div class="seg"><span>下次先查什么</span><p>写调用回来先逐字读 <code>status</code> 和 <code>code</code>，不是 <code>completed</code> 就停手；提交前跑 <code>sha256sum</code> 与改前哈希比对，相等＝没写进去，不是「内容没变」。</p></div></div>
+<div class="segs"><div class="seg"><span>我以为是</span><p><code>ops_edit_file</code> 返回了就等于写成功，程序里可以紧接着 <code>git commit</code>。</p></div><div class="seg"><span>错在第几步</span><p>断在<b>把工具回执当成内容结果</b>——它返回 <code>status:&quot;error&quot;</code>、<code>code: METADATA_UNSUPPORTED</code>（<code>edit_file: Named Windows streams are not supported</code>，<code>effectState:&quot;none&quot;</code>），我没读就往下走，<code>git commit</code> 把「正文一字未改」提交成 ，提交说明还写着改好了；直到下一轮 <code>sha256sum</code> 与改前值 <code>7d7ecc…</code> 一模一样才发现。</p></div><div class="seg"><span>下次先查什么</span><p>写调用回来先逐字读 <code>status</code> 和 <code>code</code>，不是 <code>completed</code> 就停手；提交前跑 <code>sha256sum</code> 与改前哈希比对，相等＝没写进去，不是「内容没变」。</p></div></div>
 <p class="meta endpoint"><a href="failures.html">← 全部窗口</a> · <a href="index.html">首页</a></p></main></body></html>

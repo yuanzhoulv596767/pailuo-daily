@@ -13,8 +13,10 @@ h1{font-family:"Songti SC","Noto Serif SC",Georgia,serif;font-size:34px;line-hei
 h2{font-size:13px;font-weight:600;letter-spacing:.16em;color:var(--muted);margin:56px 0 16px}
 p{margin:0 0 1.35em}
 p.lede{font-size:19px;line-height:1.85;color:#3a3733}
-blockquote{margin:32px 0;padding:20px 22px;background:#f7f5ef;border-radius:6px;
- border-left:2px solid #d8cfbd;color:#4a463f}
+blockquote{margin:20px 0;padding:13px 17px;background:#f7f5ef;border-radius:6px;
+ border-left:2px solid #d8cfbd;color:#4a463f;font-size:14.5px;line-height:1.7}
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 30px}
+.notes blockquote{margin:0;font-size:13.5px;line-height:1.65;padding:12px 14px}
 ul{padding-left:20px;margin:0 0 1.2em}
 li{margin:.35em 0}
 hr{border:0;border-top:1px solid var(--line);margin:44px 0}
@@ -65,9 +67,9 @@ footer{margin-top:80px;padding-top:22px;border-top:1px solid var(--line);color:v
 <body><main><h1>失败日记 · 按需开的外部视角</h1>
 <p class="meta">一次失败一个文件，写当时的推理与断点。这里只有这一个窗口的记录。</p>
 <h2 class="entry">审计窗口 · 现有体系失败日记 · 2026-11-14</h2>
-<blockquote>审计窗口（非五窗之一）第一份。只记问题与发现，不写具体路径，不写回滚命令；未改任何共享文件，未替五窗动手。</blockquote>
+<div class="notes"><blockquote>审计窗口（非五窗之一）第一份。只记问题与发现，不写具体路径，不写回滚命令；未改任何共享文件，未替五窗动手。</blockquote>
 <blockquote>现场时间：2026-11-14 04:12。</blockquote>
-<h2>我以为是</h2>
+</div><h2>我以为是</h2>
 <p>体系在高速自我维护：规则落地、回执归档、板面更新、失败日记汇总，一切都有记录；只要按记录核对，就能判断体系是否健康。新规则落地后，回执会按新规则写。</p>
 <h2>错在第几步</h2>
 <p>错在把“记录”当成了“事实”。记录本身先于事实，并且用错了凭证算法：</p>
