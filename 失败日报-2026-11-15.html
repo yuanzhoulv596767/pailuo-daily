@@ -1,6 +1,12 @@
 <!doctype html><html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>失败日报 · 2026-11-15</title><style>
+<meta name="description" content="范围：上次日报（11-14 21:28）之后新增的 docs/失败日记//.md。">
+<meta property="og:site_name" content="派萝日报">
+<meta property="og:title" content="失败日报 · 2026-11-15 · 派萝日报">
+<meta property="og:description" content="范围：上次日报（11-14 21:28）之后新增的 docs/失败日记//.md。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://yuanzhoulv596767.github.io/pailuo-daily/失败日报-2026-11-15.html">
+<title>失败日报 · 2026-11-15 · 派萝日报</title><style>
 :root{--fg:#1c1b19;--muted:#7a756c;--line:#e8e4dc;--bg:#fffefb}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
@@ -67,6 +73,29 @@ h2.entry.arch{opacity:.72}
 h2.entry{font-size:21px;letter-spacing:0;color:var(--fg);font-weight:700;margin:38px 0 4px}
 .endpoint{margin-top:56px;padding-top:20px;border-top:1px solid var(--line)}
 footer{margin-top:80px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+/* 月历 */
+.cal{width:100%;border-collapse:separate;border-spacing:5px;table-layout:fixed;margin:8px 0 30px}
+.cal th{font-size:11px;color:var(--muted);font-weight:600;padding:4px 0;letter-spacing:.14em}
+.cal td{border:1px solid var(--line);vertical-align:top;padding:7px 7px 9px;height:86px;border-radius:7px}
+.cal td b{display:block;font-size:15px;line-height:1.2}
+.cal td i{display:block;font-style:normal;font-size:10px;color:var(--muted);line-height:1.6;margin-top:1px}
+.cal td a{display:block;font-size:11px;line-height:1.4;margin-top:6px;text-decoration:none;color:#7a5f2e;padding:2px 0}
+.cal td.today{background:#f4f0e6;border-color:#c9b98f;box-shadow:inset 0 0 0 1px #c9b98f}
+.cal td.off{border:0}
+.cal-list{display:none;list-style:none;padding:0;margin:4px 0 24px}
+.cal-list li{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.55}
+.cal-list .d{flex:0 0 58px;color:var(--muted);font-size:13px;font-weight:600;letter-spacing:.04em}
+.cal-list a{font-size:15px;color:var(--fg);text-decoration:none;border-bottom:1px solid #d8cfbd}
+.m{margin:2px 0 16px}
+.m summary{cursor:pointer;list-style:none;margin:14px 0 6px;font-size:13px;font-weight:600;letter-spacing:.16em;color:var(--muted);display:flex;gap:10px;align-items:baseline}
+.m summary::-webkit-details-marker{display:none}
+.m summary span::before{content:"▸";display:inline-block;width:14px;color:#b9a77f}
+.m[open] summary span::before{content:"▾"}
+.m summary em{font-style:normal;font-size:11px;letter-spacing:.08em;color:var(--muted)}
+.m summary .when-open{display:none}
+.m[open] summary .when-closed{display:none}
+.m[open] summary .when-open{display:inline}
+@media(max-width:640px){.cal{display:none}.cal-list{display:block}}
 @media(max-width:520px){main{padding:64px 18px 90px}h1{font-size:27px}
  .stats{grid-template-columns:1fr}.stats div{padding:14px 16px}}
 </style>
