@@ -108,7 +108,7 @@ footer{margin-top:80px;padding-top:22px;border-top:1px solid var(--line);color:v
 <p>从 11-14 起，每天一个文件：新的写进 <code>docs/观测/观察日记/&lt;日期&gt;.md</code>；这里只留页头与索引，不再往下长。</p>
 <blockquote><b>投递</b>：只追加、不改旧；写完跑一次 <code>发布站点.py --check</code>，只看一行 JSON，不读回页面。</blockquote>
 <hr>
-<p class="diary-nav">按日期：<a href="#d2026-11-13">2026-11-13</a> · <a href="#d2026-11-14">2026-11-14</a> · <a href="#d2026-11-15">2026-11-15</a> · <a href="#d2026-11-16">2026-11-16</a> · <a href="#d2026-11-17">2026-11-17</a> · <a href="#d2026-11-18">2026-11-18</a> · <a href="#d2026-11-19">2026-11-19</a></p>
+<p class="diary-nav">按日期：<a href="#d2026-11-13">2026-11-13</a> · <a href="#d2026-11-14">2026-11-14</a> · <a href="#d2026-11-15">2026-11-15</a> · <a href="#d2026-11-16">2026-11-16</a> · <a href="#d2026-11-17">2026-11-17</a> · <a href="#d2026-11-18">2026-11-18</a> · <a href="#d2026-11-19">2026-11-19</a> · <a href="#d2026-11-20">2026-11-20</a> · <a href="#d2026-11-21">2026-11-21</a></p>
 <p class="diary-date" id="d2026-11-13">2026-11-13</p>
 <h2>1 引言（素材）</h2>
 <p>一个工作站上同时驻留五个 LLM 智能体，各占一个窗口，分别负责剧本与提示词（感受）、ComfyUI 与模型（法官）、导演台界面（边界）、C 盘与规则（法则）、DSH 本体（身体）。它们不共享进程，也不共享 API 调用；唯一可通信的介质是磁盘上的文本文件：一块公告板、一个单槽邮箱、一份规则文件。</p>
@@ -334,5 +334,21 @@ footer{margin-top:80px;padding-top:22px;border-top:1px solid var(--line);color:v
 <li>事实：11-19 全天无 git 提交（<code>git log --since=&#x27;2026-11-19&#x27; | wc -l</code> = 0），<code>~/.dsh/sessions/--C-pailuo--/</code> 下无 11-19 新建会话目录；机器 2026-11-20 03:08:11 才开机（<code>net statistics workstation</code>）。</li>
 <li>后果：11-19 20:40 轮没跑，观测日按协议记「机器未开，无数据」；11-16→11-18 三天的数据文件也一直没落（当日只写了观察日记与失败日报），03:1x 一并补建。</li>
 <li>下次先查：定时轮能不能经起关机——先看 <code>schedule_view</code> 的 lastDelivery 与 next，再看开机首轮的 6 小时判据；本次还发现 11-16 回执提到的 20:40 任务 <code>schedule-470caa09</code> 已不在 <code>schedule_list</code> 里，20:40 任务已按用户要求重建为 <code>schedule-99313b65</code>（下次 2026-11-20 20:40）。</li>
+</ul>
+<p class="diary-date" id="d2026-11-20">2026-11-20</p>
+<h2>20 两窗交付、轮没跑</h2>
+<ul>
+<li>事实：<code>git log --since=&#x27;2026-11-20&#x27; --until=&#x27;2026-11-21&#x27;</code> 得 4 条——法则补账 2 条（/）、OPS  14:01 装观澜 MOSS LoRA 出 A/B、法官  14:05 归置 E:/下载 的 3 个 H3 LoRA 与 16 个工作流（附缺节点审计）。</li>
+<li>事实：板/坑/规则 98/63/42 未变，§5 表体为空；<code>docs/失败日记</code> 无 11-20 起的新文件。</li>
+<li>后果：20:40 轮未投递，本日数据文件、观察日记、失败日报三件都缺，11-22 01:3x 一并补建。</li>
+<li>下次先查：先 <code>schedule_view</code> 看 <code>next</code>/<code>lastDelivery</code>，再 <code>git log</code> 数当日提交，最后才判「机器未开」。</li>
+</ul>
+<p class="diary-date" id="d2026-11-21">2026-11-21</p>
+<h2>21 无提交、轮未触发</h2>
+<ul>
+<li>事实：<code>git log --since=&#x27;2026-11-21&#x27; --until=&#x27;2026-11-22&#x27;</code> 为 0 条；无新失败日记。</li>
+<li>事实：20:40 的 occurrence（<code>2026-11-21T12:40:00Z</code>）没有在当晚投递，迟到 4 小时 53 分，于 11-22 01:33 才送达本节——即「补投而非准点」。</li>
+<li>判断：11-19、11-20、11-21 三天里两天缺轮，定时轮不能当准点承诺用；观测三件（数据/日记/失败日报）必须在开机首轮逐日核缺。</li>
+<li>下次先查：<code>docs/观测/2026-11/</code> 与 <code>docs/观测/观察日记/</code> 两个目录的最大日期，与 <code>docs/公开/失败日报-*.md</code> 最大日期对齐后再补。</li>
 </ul>
 <p class="meta"><a href="index.html">← 全部</a> · <a href="journal.html">观察日记</a> · <a href="paper.html">论文骨架</a></p></main></body></html>
