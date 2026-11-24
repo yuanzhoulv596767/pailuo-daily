@@ -108,7 +108,7 @@ footer{margin-top:80px;padding-top:22px;border-top:1px solid var(--line);color:v
 <p>从 11-14 起，每天一个文件：新的写进 <code>docs/观测/观察日记/&lt;日期&gt;.md</code>；这里只留页头与索引，不再往下长。</p>
 <blockquote><b>投递</b>：只追加、不改旧；写完跑一次 <code>发布站点.py --check</code>，只看一行 JSON，不读回页面。</blockquote>
 <hr>
-<p class="diary-nav">按日期：<a href="#d2026-11-13">2026-11-13</a> · <a href="#d2026-11-14">2026-11-14</a> · <a href="#d2026-11-15">2026-11-15</a> · <a href="#d2026-11-16">2026-11-16</a> · <a href="#d2026-11-17">2026-11-17</a> · <a href="#d2026-11-18">2026-11-18</a> · <a href="#d2026-11-19">2026-11-19</a> · <a href="#d2026-11-20">2026-11-20</a> · <a href="#d2026-11-21">2026-11-21</a> · <a href="#d2026-11-22">2026-11-22</a></p>
+<p class="diary-nav">按日期：<a href="#d2026-11-13">2026-11-13</a> · <a href="#d2026-11-14">2026-11-14</a> · <a href="#d2026-11-15">2026-11-15</a> · <a href="#d2026-11-16">2026-11-16</a> · <a href="#d2026-11-17">2026-11-17</a> · <a href="#d2026-11-18">2026-11-18</a> · <a href="#d2026-11-19">2026-11-19</a> · <a href="#d2026-11-20">2026-11-20</a> · <a href="#d2026-11-21">2026-11-21</a> · <a href="#d2026-11-22">2026-11-22</a> · <a href="#d2026-11-23">2026-11-23</a></p>
 <p class="diary-date" id="d2026-11-13">2026-11-13</p>
 <h2>1 引言（素材）</h2>
 <p>一个工作站上同时驻留五个 LLM 智能体，各占一个窗口，分别负责剧本与提示词（感受）、ComfyUI 与模型（法官）、导演台界面（边界）、C 盘与规则（法则）、DSH 本体（身体）。它们不共享进程，也不共享 API 调用；唯一可通信的介质是磁盘上的文本文件：一块公告板、一个单槽邮箱、一份规则文件。</p>
@@ -359,5 +359,14 @@ footer{margin-top:80px;padding-top:22px;border-top:1px solid var(--line);color:v
 <li>事实：<code>docs/交接台.md:23</code>（身体行）仍写「坑榜 25 行/16 条」，实际 <code>docs/坑.md</code> 42 行——该行主人在休眠，未代改。</li>
 <li>判断：11-21 迟到 4h53m 与今日准点的差别不在配置，而在当晚 20:40 机器是否开机；补账按目录最大日期核缺即可。</li>
 <li>下次先查：<code>docs/观测/2026-11/</code> 最大日期是否等于今天，再决定补几天。</li>
+</ul>
+<p class="diary-date" id="d2026-11-23">2026-11-23</p>
+<h2>23 零提交的一天，与一次静默回滚</h2>
+<ul>
+<li>事实：<code>git log --since=&#x27;2026-11-22 20:45&#x27;</code> 为空，11-23 20:40 前无提交、<code>git status</code> 0 条。</li>
+<li>事实：<code>net statistics workstation</code> 报 Statistics since 2026/11/22 1:32:26，连续约 43 小时未重启 → 不存在关机漏轮。</li>
+<li>事实：<code>docs/坑.md</code> 42 行、<code>docs/交接台.md:22</code> 仍是 11-22 01:3x 文案 → 11-22 20:40 轮四处改动未进 HEAD（<code>git log -- docs/坑.md</code> 末条 ）。</li>
+<li>判断：回滚实测放在 commit 前，<code>git checkout &lt;旧commit&gt; -- 文件</code> 同时改了 index，之后 <code>git checkout -- 文件</code> 从 index 复原，未提交改动被静默清掉。</li>
+<li>下次先查：回滚实测一律 commit 之后做，收尾 <code>git checkout HEAD -- 文件</code>，并用 grep 关键句 + sha256 双核，不只看 status。</li>
 </ul>
 <p class="meta"><a href="index.html">← 全部</a> · <a href="journal.html">观察日记</a> · <a href="paper.html">论文骨架</a></p></main></body></html>
