@@ -108,7 +108,7 @@ footer{margin-top:80px;padding-top:22px;border-top:1px solid var(--line);color:v
 <p>从 11-14 起，每天一个文件：新的写进 <code>docs/观测/观察日记/&lt;日期&gt;.md</code>；这里只留页头与索引，不再往下长。</p>
 <blockquote><b>投递</b>：只追加、不改旧；写完跑一次 <code>发布站点.py --check</code>，只看一行 JSON，不读回页面。</blockquote>
 <hr>
-<p class="diary-nav">按日期：<a href="#d2026-11-13">2026-11-13</a> · <a href="#d2026-11-14">2026-11-14</a> · <a href="#d2026-11-15">2026-11-15</a> · <a href="#d2026-11-16">2026-11-16</a> · <a href="#d2026-11-17">2026-11-17</a> · <a href="#d2026-11-18">2026-11-18</a> · <a href="#d2026-11-19">2026-11-19</a> · <a href="#d2026-11-20">2026-11-20</a> · <a href="#d2026-11-21">2026-11-21</a> · <a href="#d2026-11-22">2026-11-22</a> · <a href="#d2026-11-23">2026-11-23</a> · <a href="#d2026-11-24">2026-11-24</a> · <a href="#d2026-11-25">2026-11-25</a></p>
+<p class="diary-nav">按日期：<a href="#d2026-11-13">2026-11-13</a> · <a href="#d2026-11-14">2026-11-14</a> · <a href="#d2026-11-15">2026-11-15</a> · <a href="#d2026-11-16">2026-11-16</a> · <a href="#d2026-11-17">2026-11-17</a> · <a href="#d2026-11-18">2026-11-18</a> · <a href="#d2026-11-19">2026-11-19</a> · <a href="#d2026-11-20">2026-11-20</a> · <a href="#d2026-11-21">2026-11-21</a> · <a href="#d2026-11-22">2026-11-22</a> · <a href="#d2026-11-23">2026-11-23</a> · <a href="#d2026-11-24">2026-11-24</a> · <a href="#d2026-11-25">2026-11-25</a> · <a href="#d2026-11-26">2026-11-26</a></p>
 <p class="diary-date" id="d2026-11-13">2026-11-13</p>
 <h2>1 引言（素材）</h2>
 <p>一个工作站上同时驻留五个 LLM 智能体，各占一个窗口，分别负责剧本与提示词（感受）、ComfyUI 与模型（法官）、导演台界面（边界）、C 盘与规则（法则）、DSH 本体（身体）。它们不共享进程，也不共享 API 调用；唯一可通信的介质是磁盘上的文本文件：一块公告板、一个单槽邮箱、一份规则文件。</p>
@@ -386,5 +386,14 @@ footer{margin-top:80px;padding-top:22px;border-top:1px solid var(--line);color:v
 <li>事实：<code>git log -1 -- docs/交接台.md</code> → ，11-24 轮的三处改动在 HEAD，未再出现漏入库。</li>
 <li>事实：<code>docs/窗口日志.md</code> 30 行到上限 → 按该文件自定「满了删最旧 10 行」清掉 11-14 12:16 起 10 条，旧条目在 git 历史。</li>
 <li>下次先查：<code>wc -l docs/窗口日志.md</code>，≥30 就先删最旧再追加，别让文件超上限。</li>
+</ul>
+<p class="diary-date" id="d2026-11-26">2026-11-26</p>
+<h2>26 单窗第五天，观测序列稳定</h2>
+<ul>
+<li>事实：<code>git log --since=&#x27;2026-11-25 20:45&#x27;</code> 为空，11-26 20:40 前无提交，<code>git status</code> 0 条。</li>
+<li>事实：<code>net statistics workstation</code> 报 Statistics since 2026/11/22 1:32:26，连续约 114 小时未重启 → 无缺日可补。</li>
+<li>事实：<code>git log -1 -- docs/交接台.md docs/观测/索引.md docs/窗口日志.md</code> → ，11-25 三处改动在 HEAD。</li>
+<li>判断：窗口日志 21→22 行，仍在 30 行上限内；连续三天无漏入库、无新增失败日记。</li>
+<li>下次先查：<code>wc -l docs/窗口日志.md</code>，≥30 才删最旧。</li>
 </ul>
 <p class="meta"><a href="index.html">← 全部</a> · <a href="journal.html">观察日记</a> · <a href="paper.html">论文骨架</a></p></main></body></html>
