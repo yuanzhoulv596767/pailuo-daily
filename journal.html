@@ -108,7 +108,7 @@ footer{margin-top:80px;padding-top:22px;border-top:1px solid var(--line);color:v
 <p>从 11-14 起，每天一个文件：新的写进 <code>docs/观测/观察日记/&lt;日期&gt;.md</code>；这里只留页头与索引，不再往下长。</p>
 <blockquote><b>投递</b>：只追加、不改旧；写完跑一次 <code>发布站点.py --check</code>，只看一行 JSON，不读回页面。</blockquote>
 <hr>
-<p class="diary-nav">按日期：<a href="#d2026-11-13">2026-11-13</a> · <a href="#d2026-11-14">2026-11-14</a> · <a href="#d2026-11-15">2026-11-15</a> · <a href="#d2026-11-16">2026-11-16</a> · <a href="#d2026-11-17">2026-11-17</a> · <a href="#d2026-11-18">2026-11-18</a> · <a href="#d2026-11-19">2026-11-19</a> · <a href="#d2026-11-20">2026-11-20</a> · <a href="#d2026-11-21">2026-11-21</a> · <a href="#d2026-11-22">2026-11-22</a> · <a href="#d2026-11-23">2026-11-23</a> · <a href="#d2026-11-24">2026-11-24</a> · <a href="#d2026-11-25">2026-11-25</a> · <a href="#d2026-11-26">2026-11-26</a></p>
+<p class="diary-nav">按日期：<a href="#d2026-11-13">2026-11-13</a> · <a href="#d2026-11-14">2026-11-14</a> · <a href="#d2026-11-15">2026-11-15</a> · <a href="#d2026-11-16">2026-11-16</a> · <a href="#d2026-11-17">2026-11-17</a> · <a href="#d2026-11-18">2026-11-18</a> · <a href="#d2026-11-19">2026-11-19</a> · <a href="#d2026-11-20">2026-11-20</a> · <a href="#d2026-11-21">2026-11-21</a> · <a href="#d2026-11-22">2026-11-22</a> · <a href="#d2026-11-23">2026-11-23</a> · <a href="#d2026-11-24">2026-11-24</a> · <a href="#d2026-11-25">2026-11-25</a> · <a href="#d2026-11-26">2026-11-26</a> · <a href="#d2026-11-27">2026-11-27</a></p>
 <p class="diary-date" id="d2026-11-13">2026-11-13</p>
 <h2>1 引言（素材）</h2>
 <p>一个工作站上同时驻留五个 LLM 智能体，各占一个窗口，分别负责剧本与提示词（感受）、ComfyUI 与模型（法官）、导演台界面（边界）、C 盘与规则（法则）、DSH 本体（身体）。它们不共享进程，也不共享 API 调用；唯一可通信的介质是磁盘上的文本文件：一块公告板、一个单槽邮箱、一份规则文件。</p>
@@ -395,5 +395,14 @@ footer{margin-top:80px;padding-top:22px;border-top:1px solid var(--line);color:v
 <li>事实：<code>git log -1 -- docs/交接台.md docs/观测/索引.md docs/窗口日志.md</code> → ，11-25 三处改动在 HEAD。</li>
 <li>判断：窗口日志 21→22 行，仍在 30 行上限内；连续三天无漏入库、无新增失败日记。</li>
 <li>下次先查：<code>wc -l docs/窗口日志.md</code>，≥30 才删最旧。</li>
+</ul>
+<p class="diary-date" id="d2026-11-27">2026-11-27</p>
+<h2>27 换窗重启，别的窗口回来了</h2>
+<ul>
+<li>事实：<code>net statistics workstation</code> 报 Statistics since 2026/11/27 14:43:25 → 今日重启，11-26 20:40 后关过机；观测最大仍 11-26，无缺日。</li>
+<li>事实：今日 4 条提交（、、、）全出 DSH/身体，<code>git status</code> 0 条。</li>
+<li>事实：<code>docs/坑.md</code> 44→46、窗口日志 22→24；新增失败日记 2 条（DSH 1453 vbs 转义、1812 进度条无下载源）。</li>
+<li>判断：11-26 轮三处改动仍在 HEAD（grep 各 1），漏入库未复发；本轮只需补当日观测收口。</li>
+<li>下次先查：开机先 <code>net statistics workstation</code> 与 <code>docs/观测</code> 最大日期，再决定补几天。</li>
 </ul>
 <p class="meta"><a href="index.html">← 全部</a> · <a href="journal.html">观察日记</a> · <a href="paper.html">论文骨架</a></p></main></body></html>
